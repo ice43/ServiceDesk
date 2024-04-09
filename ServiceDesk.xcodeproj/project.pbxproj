@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
-		CD834E1B2BC3FC1800C18624 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* ContentView.swift */; };
+		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
 		CD834E1D2BC3FC1900C18624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD834E1C2BC3FC1900C18624 /* Assets.xcassets */; };
 		CD834E202BC3FC1900C18624 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD834E1F2BC3FC1900C18624 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
@@ -16,7 +16,7 @@
 /* Begin PBXFileReference section */
 		CD834E152BC3FC1800C18624 /* ServiceDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeskApp.swift; sourceTree = "<group>"; };
-		CD834E1A2BC3FC1800C18624 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CD834E1A2BC3FC1800C18624 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		CD834E1C2BC3FC1900C18624 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD834E1F2BC3FC1900C18624 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +32,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD3D2EAD2BC5518E000DB275 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				CD834E1A2BC3FC1800C18624 /* LoginView.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
 		CD834E0C2BC3FC1800C18624 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */,
-				CD834E1A2BC3FC1800C18624 /* ContentView.swift */,
+				CD3D2EAD2BC5518E000DB275 /* LoginView */,
 				CD834E1C2BC3FC1900C18624 /* Assets.xcassets */,
 				CD834E1E2BC3FC1900C18624 /* Preview Content */,
 			);
@@ -137,7 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD834E1B2BC3FC1800C18624 /* ContentView.swift in Sources */,
+				CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */,
 				CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,11 +283,12 @@
 				DEVELOPMENT_TEAM = V3YK82Q5NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Service Desk";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -287,9 +296,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = broski43.ServiceDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,11 +317,12 @@
 				DEVELOPMENT_TEAM = V3YK82Q5NN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Service Desk";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,9 +330,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = broski43.ServiceDesk;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
