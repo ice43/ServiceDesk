@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State var login: String = ""
-    @State var pass: String = ""
+    @EnvironmentObject private var loginViewVM: LoginViewViewModel
     
     var body: some View {
         Spacer()
@@ -28,12 +27,12 @@ struct LoginView: View {
             .padding(.leading, 30)
             
             VStack(alignment: .leading, spacing: 20) {
-                TextField("Required", text: $login)
+                TextField("Required", text: $loginViewVM.user.name)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
                 
-                SecureField("Required", text: $pass)
+                SecureField("Required", text: $loginViewVM.user.pass)
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
@@ -41,7 +40,7 @@ struct LoginView: View {
             .padding(.trailing, 30)
         }
         
-        Button(action: {} ) {
+        Button(action: loginViewVM.openMainView ) {
             Text("Log in")
                 .foregroundStyle(.white)
         }
@@ -62,4 +61,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
+        .environmentObject(LoginViewViewModel())
 }

@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ServiceDeskApp: App {
+    @StateObject private var loginViewVM = LoginViewViewModel(
+        user: StorageManager.shared.loadUser()
+    )
+    
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            RootView()
         }
+        .environmentObject(loginViewVM)
     }
 }

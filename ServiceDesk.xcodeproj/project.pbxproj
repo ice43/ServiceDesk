@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EAE2BC551D8000DB275 /* MainView.swift */; };
+		CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB12BC55279000DB275 /* ContactsView.swift */; };
+		CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */; };
+		CD3D2EB82BC5535B000DB275 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB72BC5535B000DB275 /* User.swift */; };
+		CD3D2EBB2BC55495000DB275 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EBA2BC55495000DB275 /* DataStore.swift */; };
+		CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EBD2BC5591E000DB275 /* ContactDetailsView.swift */; };
+		CD3D2EC12BC55FBA000DB275 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EC02BC55FBA000DB275 /* RootView.swift */; };
+		CD3D2EC42BC56059000DB275 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */; };
+		CD3D2EC62BC5612C000DB275 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EC52BC5612C000DB275 /* StorageManager.swift */; };
+		CD3F1B162BCA826E00BDD3BC /* ContactsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F1B152BCA826E00BDD3BC /* ContactsViewViewModel.swift */; };
+		CD3F1B182BCA9BEA00BDD3BC /* ContactCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3F1B172BCA9BEA00BDD3BC /* ContactCellView.swift */; };
+		CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF22BC91CAB0008A34B /* NetworkManager.swift */; };
+		CD493AF62BC91CDE0008A34B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF52BC91CDE0008A34B /* Alamofire */; };
+		CD493AF82BC91CDE0008A34B /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF72BC91CDE0008A34B /* AlamofireDynamic */; };
+		CD493AFA2BC91F550008A34B /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF92BC91F550008A34B /* Company.swift */; };
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
 		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
 		CD834E1D2BC3FC1900C18624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD834E1C2BC3FC1900C18624 /* Assets.xcassets */; };
@@ -14,6 +29,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD3D2EAE2BC551D8000DB275 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		CD3D2EB12BC55279000DB275 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsView.swift; sourceTree = "<group>"; };
+		CD3D2EB72BC5535B000DB275 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CD3D2EBA2BC55495000DB275 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
+		CD3D2EBD2BC5591E000DB275 /* ContactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsView.swift; sourceTree = "<group>"; };
+		CD3D2EC02BC55FBA000DB275 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		CD3D2EC52BC5612C000DB275 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		CD3F1B152BCA826E00BDD3BC /* ContactsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewViewModel.swift; sourceTree = "<group>"; };
+		CD3F1B172BCA9BEA00BDD3BC /* ContactCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCellView.swift; sourceTree = "<group>"; };
+		CD493AF22BC91CAB0008A34B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CD493AF92BC91F550008A34B /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		CD834E152BC3FC1800C18624 /* ServiceDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeskApp.swift; sourceTree = "<group>"; };
 		CD834E1A2BC3FC1800C18624 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -26,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD493AF62BC91CDE0008A34B /* Alamofire in Frameworks */,
+				CD493AF82BC91CDE0008A34B /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +66,78 @@
 			isa = PBXGroup;
 			children = (
 				CD834E1A2BC3FC1800C18624 /* LoginView.swift */,
+				CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		CD3D2EB02BC551E2000DB275 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EAE2BC551D8000DB275 /* MainView.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		CD3D2EB52BC552AE000DB275 /* ContactsView */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EB12BC55279000DB275 /* ContactsView.swift */,
+				CD3F1B152BCA826E00BDD3BC /* ContactsViewViewModel.swift */,
+				CD3F1B192BCA9BF600BDD3BC /* ContactCell */,
+			);
+			path = ContactsView;
+			sourceTree = "<group>";
+		};
+		CD3D2EB62BC552C2000DB275 /* DepartmentsView */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */,
+			);
+			path = DepartmentsView;
+			sourceTree = "<group>";
+		};
+		CD3D2EB92BC55360000DB275 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EB72BC5535B000DB275 /* User.swift */,
+				CD493AF92BC91F550008A34B /* Company.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD3D2EBC2BC5549B000DB275 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EBA2BC55495000DB275 /* DataStore.swift */,
+				CD3D2EC52BC5612C000DB275 /* StorageManager.swift */,
+				CD493AF22BC91CAB0008A34B /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CD3D2EBF2BC55923000DB275 /* ContactDetailsView */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EBD2BC5591E000DB275 /* ContactDetailsView.swift */,
+			);
+			path = ContactDetailsView;
+			sourceTree = "<group>";
+		};
+		CD3D2EC22BC55FED000DB275 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD3D2EC02BC55FBA000DB275 /* RootView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD3F1B192BCA9BF600BDD3BC /* ContactCell */ = {
+			isa = PBXGroup;
+			children = (
+				CD3F1B172BCA9BEA00BDD3BC /* ContactCellView.swift */,
+			);
+			path = ContactCell;
 			sourceTree = "<group>";
 		};
 		CD834E0C2BC3FC1800C18624 = {
@@ -61,6 +161,13 @@
 			children = (
 				CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */,
 				CD3D2EAD2BC5518E000DB275 /* LoginView */,
+				CD3D2EB02BC551E2000DB275 /* MainView */,
+				CD3D2EB62BC552C2000DB275 /* DepartmentsView */,
+				CD3D2EB52BC552AE000DB275 /* ContactsView */,
+				CD3D2EBF2BC55923000DB275 /* ContactDetailsView */,
+				CD3D2EB92BC55360000DB275 /* Models */,
+				CD3D2EBC2BC5549B000DB275 /* Services */,
+				CD3D2EC22BC55FED000DB275 /* Views */,
 				CD834E1C2BC3FC1900C18624 /* Assets.xcassets */,
 				CD834E1E2BC3FC1900C18624 /* Preview Content */,
 			);
@@ -91,6 +198,10 @@
 			dependencies = (
 			);
 			name = ServiceDesk;
+			packageProductDependencies = (
+				CD493AF52BC91CDE0008A34B /* Alamofire */,
+				CD493AF72BC91CDE0008A34B /* AlamofireDynamic */,
+			);
 			productName = ServiceDesk;
 			productReference = CD834E152BC3FC1800C18624 /* ServiceDesk.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +230,9 @@
 				Base,
 			);
 			mainGroup = CD834E0C2BC3FC1800C18624;
+			packageReferences = (
+				CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CD834E162BC3FC1800C18624 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,8 +259,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD493AFA2BC91F550008A34B /* Company.swift in Sources */,
+				CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */,
+				CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */,
+				CD3D2EBB2BC55495000DB275 /* DataStore.swift in Sources */,
+				CD3D2EC62BC5612C000DB275 /* StorageManager.swift in Sources */,
 				CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */,
+				CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */,
+				CD3D2EB82BC5535B000DB275 /* User.swift in Sources */,
+				CD3F1B162BCA826E00BDD3BC /* ContactsViewViewModel.swift in Sources */,
+				CD3D2EC42BC56059000DB275 /* LoginViewViewModel.swift in Sources */,
+				CD3D2EC12BC55FBA000DB275 /* RootView.swift in Sources */,
+				CD3F1B182BCA9BEA00BDD3BC /* ContactCellView.swift in Sources */,
+				CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */,
 				CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */,
+				CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +489,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD493AF52BC91CDE0008A34B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CD493AF72BC91CDE0008A34B /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CD834E0D2BC3FC1800C18624 /* Project object */;
 }
