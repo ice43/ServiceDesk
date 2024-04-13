@@ -11,7 +11,6 @@
 		CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB12BC55279000DB275 /* ContactsView.swift */; };
 		CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */; };
 		CD3D2EB82BC5535B000DB275 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB72BC5535B000DB275 /* User.swift */; };
-		CD3D2EBB2BC55495000DB275 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EBA2BC55495000DB275 /* DataStore.swift */; };
 		CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EBD2BC5591E000DB275 /* ContactDetailsView.swift */; };
 		CD3D2EC12BC55FBA000DB275 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EC02BC55FBA000DB275 /* RootView.swift */; };
 		CD3D2EC42BC56059000DB275 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */; };
@@ -33,7 +32,6 @@
 		CD3D2EB12BC55279000DB275 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsView.swift; sourceTree = "<group>"; };
 		CD3D2EB72BC5535B000DB275 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		CD3D2EBA2BC55495000DB275 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		CD3D2EBD2BC5591E000DB275 /* ContactDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailsView.swift; sourceTree = "<group>"; };
 		CD3D2EC02BC55FBA000DB275 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 		CD3D2EBC2BC5549B000DB275 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CD3D2EBA2BC55495000DB275 /* DataStore.swift */,
 				CD3D2EC52BC5612C000DB275 /* StorageManager.swift */,
 				CD493AF22BC91CAB0008A34B /* NetworkManager.swift */,
 			);
@@ -262,7 +259,6 @@
 				CD493AFA2BC91F550008A34B /* Company.swift in Sources */,
 				CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */,
 				CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */,
-				CD3D2EBB2BC55495000DB275 /* DataStore.swift in Sources */,
 				CD3D2EC62BC5612C000DB275 /* StorageManager.swift in Sources */,
 				CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */,
 				CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */,

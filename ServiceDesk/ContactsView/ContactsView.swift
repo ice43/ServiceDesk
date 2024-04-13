@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContactsView: View {
-//    @State private var contacts: [Contact] = []
     @State private var departments: [Department] = []
     private let networkManager = NetworkManager.shared
     

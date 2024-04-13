@@ -15,22 +15,24 @@ struct ContactDetailsView: View {
             HStack {
                 Spacer()
                 
-//                Image(systemName: contact.avatar)
-//                    .resizable()
-//                    .frame(width: 150, height: 150)
+                Image(systemName: "person.fill")
+                    .resizable()
+                    .frame(width: 150, height: 150)
+                    .foregroundStyle(.tint)
                 
                 Spacer()
             }
             
-//            Label(contact.fullName, systemImage: "person")
-//            Label(contact.phone, systemImage: "phone")
-//            Label(contact.email, systemImage: "tray")
-//            Label(contact.position, systemImage: "star")
+            Label(contact.name, systemImage: "person")
+            Label(contact.post, systemImage: "star")
+            Label(contact.phone, systemImage: "phone")
+            Label(contact.email, systemImage: "tray")
         }
-//        .navigationTitle(contact.fullName)
+        .navigationTitle(contact.name)
+        .tint(.ascp)
     }
 }
 
-//#Preview {
-//    ContactDetailsView(contact: Person.getContacts().first!)
-//}
+#Preview {
+    ContactDetailsView(contact: Contact.getContact())
+}

@@ -30,8 +30,8 @@ final class NetworkManager {
             .responseDecodable(of: Company.self) { response in
                 switch response.result {
                 case .success(let data):
-//                    let contacts = data.unionSeaCompanyDepartments.flatMap { $0.members }
-                    completion(.success(data.unionSeaCompanyDepartments))
+                    let departments = data.unionSeaCompanyDepartments
+                    completion(.success(departments))
                 case .failure(let error):
                     completion(.failure(error))
                 }

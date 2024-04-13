@@ -23,6 +23,7 @@ struct MainView: View {
                     Text("Contacts")
                 }
         }
+        .tint(.ascp)
     }
 }
 
