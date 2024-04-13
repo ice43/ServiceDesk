@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContactsView: View {
-    @State private var departments: [Department] = []
-    private let networkManager = NetworkManager.shared
+    @StateObject private var contactsViewVM = ContactsViewViewModel()
     
     var body: some View {
         NavigationStack {
-            List(departments, id: \.id) { department in
+            List(contactsViewVM.filteredDepartments, id: \.id) { department in
                 Section {
                     ForEach(department.members, id: \.name) { contact in
                         NavigationLink(destination: ContactDetailsView(contact: contact)) {
@@ -23,21 +22,15 @@ struct ContactsView: View {
                 } header: {
                     Text(department.name)
                         .fixedSize(horizontal: false, vertical: true)
-                        .padding(.vertical, 10)
+                        .padding(.bottom, 10)
                 }
                 
             }
             .navigationTitle("Contacts")
+            .searchable(text: $contactsViewVM.searchText, prompt: "Look for a person")
         }
         .onAppear {
-            networkManager.fetchContacts(from: Link.contacts.url) { result in
-                switch result {
-                case .success(let departments):
-                    self.departments = departments
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            }
+            contactsViewVM.fetchContacts()
         }
     }
 }
