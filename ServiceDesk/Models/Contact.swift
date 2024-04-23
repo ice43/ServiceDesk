@@ -7,15 +7,15 @@
 
 import Foundation
 
-struct Company: Decodable {
-    let unionSeaCompanyDepartments: [Department]
+struct CompanyContact: Decodable {
+    let unionSeaCompanyDepartments: [DepartmentContact]
     
     private enum CodingKeys: String, CodingKey {
         case unionSeaCompanyDepartments = "union_sea_company_departments"
     }
 }
 
-struct Department: Decodable {
+struct DepartmentContact: Decodable {
     let id: Int
     let name: String
     let members: [Contact]

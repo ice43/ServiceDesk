@@ -49,12 +49,14 @@ struct Departments {
     }
 }
 
-struct Tasks {
+struct Tasks: Equatable {
     let author: String
     let task: String
     let number: String
     let date: String
     let priority: String
+    let status: String
+    let responsiblePerson: String
     
     static func getTasks() -> [Tasks] {
         var tasks: [Tasks] = []
@@ -66,7 +68,9 @@ struct Tasks {
             dataStore.tasks.count,
             dataStore.numbers.count,
             dataStore.dates.count,
-            dataStore.priorities.count
+            dataStore.priorities.count,
+            dataStore.statuses.count,
+            dataStore.responsiblePeople.count
         )
         
         for index in 0..<iterationCount {
@@ -75,12 +79,18 @@ struct Tasks {
                 task: dataStore.tasks[index],
                 number: dataStore.numbers[index],
                 date: dataStore.dates[index],
-                priority: dataStore.priorities[index]
+                priority: dataStore.priorities[index],
+                status: dataStore.statuses[index],
+                responsiblePerson: dataStore.responsiblePeople[index]
             )
             tasks.append(task)
         }
-        return tasks
         
+        return tasks
+    }
+    
+    static func == (lhs: Tasks, rhs: Tasks) -> Bool {
+            return lhs.task == rhs.task
     }
 }
 
@@ -135,6 +145,22 @@ final class DataStore {
         "Priority not set",
         "Priority not set",
         "Priority not set"
+    ]
+    
+    let statuses = [
+        "Open",
+        "Open",
+        "Open",
+        "Open",
+        "Open"
+    ]
+    
+    let responsiblePeople = [
+        "Not set",
+        "Not set",
+        "Not set",
+        "Not set",
+        "Not set"
     ]
     
     private init() {}

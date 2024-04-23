@@ -31,6 +31,9 @@ struct LoginView: View {
                     .autocorrectionDisabled()
                     .textInputAutocapitalization(.never)
                     .textFieldStyle(.roundedBorder)
+                    .onAppear {
+                        UITextField.appearance().clearButtonMode = .whileEditing
+                    }
                 
                 SecureField("Required", text: $loginViewVM.user.pass)
                     .autocorrectionDisabled()
@@ -49,12 +52,7 @@ struct LoginView: View {
         .clipShape(.capsule)
         .padding(.top, 20)
         
-        Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
-        Spacer()
+        Spacer(minLength: 270)
     }
 }
 

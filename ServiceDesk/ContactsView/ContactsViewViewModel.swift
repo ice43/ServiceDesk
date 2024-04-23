@@ -8,10 +8,10 @@
 import Foundation
 
 final class ContactsViewViewModel: ObservableObject {
-    @Published var departments: [Department] = []
+    @Published var departments: [DepartmentContact] = []
     @Published var searchText = ""
     
-    var filteredDepartments: [Department] {
+    var filteredDepartments: [DepartmentContact] {
         guard !searchText.isEmpty else { return departments }
         
         return departments.compactMap { department in
@@ -24,7 +24,7 @@ final class ContactsViewViewModel: ObservableObject {
             
             guard !filteredContacts.isEmpty else { return nil }
             
-            return Department(
+            return DepartmentContact(
                 id: department.id,
                 name: department.name,
                 members: filteredContacts

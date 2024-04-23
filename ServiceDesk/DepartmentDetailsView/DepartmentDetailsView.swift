@@ -8,30 +8,37 @@
 import SwiftUI
 
 struct DepartmentDetailsView: View {
+    @State private var isShowingCreateAnIncident = false
     @State private var isExpandedIncome = false
     @State private var isExpandedOutgoing = false
     @State private var isExpandedGroup = false
     
     let title: String
     let tasks = Tasks.getTasks()
+    let departmentName: DepartmentTask
     
     var body: some View {
         Spacer()
         
-        Button(action: {} ) {
-            Text("Create an accident")
+        Button(action: { isShowingCreateAnIncident = true } ) {
+            Text("Create an incident")
                 .foregroundStyle(.white)
         }
         .frame(width: 200, height: 45)
         .background(.green)
         .clipShape(.capsule)
+        .sheet(isPresented: $isShowingCreateAnIncident) {
+            IncidentView(departmentName: departmentName)
+        }
         
         Spacer()
         
-        VStack(alignment: .leading, spacing: 20) {
-            Button(action: {} ) {
-                Image(systemName: "hand.thumbsup")
-                Text("Awaiting approval")
+        VStack(alignment: .leading, spacing: 20) {            
+            NavigationLink(destination: TasksView(tasks: tasks, title: "Awaiting approval")) {
+                HStack {
+                    Image(systemName: "hand.thumbsup")
+                    Text("Awaiting approval")
+                }
             }
             
             Button(action: showIncomingRequests) {
@@ -44,32 +51,31 @@ struct DepartmentDetailsView: View {
             if isExpandedIncome {
                 List {
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Open"),
                         label: { Text("Open") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Completed"),
                         label: { Text("Completed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Closed"),
                         label: { Text("Closed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
                         label: { Text("Motivated refusals") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Subscriptions"),
                         label: { Text("Subscriptions") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Approval"),
                         label: { Text("Approval") }
                     )
                 }
                 .listStyle(.plain)
-                .transition(.move(edge: .bottom))
             }
             
             
@@ -83,24 +89,23 @@ struct DepartmentDetailsView: View {
             if isExpandedOutgoing {
                 List {
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Open"),
                         label: { Text("Open") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Completed"),
                         label: { Text("Completed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Closed"),
                         label: { Text("Closed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
                         label: { Text("Motivated refusals") }
                     )
                 }
                 .listStyle(.plain)
-                .transition(.move(edge: .bottom))
             }
             
             Button(action: showGroupRequests) {
@@ -113,35 +118,34 @@ struct DepartmentDetailsView: View {
             if isExpandedGroup {
                 List {
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Open"),
                         label: { Text("Open") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Completed"),
                         label: { Text("Completed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Closed"),
                         label: { Text("Closed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
                         label: { Text("Motivated refusals") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Subscriptions"),
                         label: { Text("Subscriptions") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks),
+                        destination: TasksView(tasks: tasks, title: "Approval"),
                         label: { Text("Approval") }
                     )
                 }
                 .listStyle(.plain)
-                .transition(.move(edge: .bottom))
             }
             
-            Button(action: {} ) {
+            NavigationLink(destination: AdvancedSearchView(title: "Advanced search", tasks: tasks)) {
                 Image(systemName: "magnifyingglass")
                 Text("Advanced search")
             }
@@ -186,6 +190,6 @@ struct DepartmentDetailsView: View {
     }
 }
 
-#Preview {
-    DepartmentDetailsView(title: "IT Department")
-}
+//#Preview {
+//    DepartmentDetailsView(title: "IT Department", department: )
+//}

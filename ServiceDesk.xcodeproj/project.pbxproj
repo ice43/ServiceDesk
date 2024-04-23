@@ -23,8 +23,15 @@
 		CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF22BC91CAB0008A34B /* NetworkManager.swift */; };
 		CD493AF62BC91CDE0008A34B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF52BC91CDE0008A34B /* Alamofire */; };
 		CD493AF82BC91CDE0008A34B /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF72BC91CDE0008A34B /* AlamofireDynamic */; };
-		CD493AFA2BC91F550008A34B /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF92BC91F550008A34B /* Company.swift */; };
+		CD493AFA2BC91F550008A34B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF92BC91F550008A34B /* Contact.swift */; };
+		CD5629B52BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */; };
+		CD588AAB2BD6488F00ADF3BE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD588AAA2BD6488F00ADF3BE /* Task.swift */; };
+		CD588AAD2BD6562400ADF3BE /* DepartmentsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */; };
+		CD588AAF2BD6793F00ADF3BE /* IncidentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD588AAE2BD6793F00ADF3BE /* IncidentViewViewModel.swift */; };
 		CD5A18B32BD1034C00656EDF /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A18B22BD1034C00656EDF /* TaskCellView.swift */; };
+		CD5B9A922BD4B79C00714CCA /* AdvancedSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */; };
+		CD5B9A952BD4B99B00714CCA /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A942BD4B99B00714CCA /* IncidentView.swift */; };
+		CD5B9A982BD4D67B00714CCA /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A972BD4D67B00714CCA /* TaskView.swift */; };
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
 		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
 		CD834E1D2BC3FC1900C18624 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD834E1C2BC3FC1900C18624 /* Assets.xcassets */; };
@@ -46,8 +53,15 @@
 		CD3F1B1A2BCB1B8400BDD3BC /* DepartmentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentItemView.swift; sourceTree = "<group>"; };
 		CD3F1B1D2BCB254B00BDD3BC /* DepartmentDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetailsView.swift; sourceTree = "<group>"; };
 		CD493AF22BC91CAB0008A34B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		CD493AF92BC91F550008A34B /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		CD493AF92BC91F550008A34B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewViewModel.swift; sourceTree = "<group>"; };
+		CD588AAA2BD6488F00ADF3BE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsViewViewModel.swift; sourceTree = "<group>"; };
+		CD588AAE2BD6793F00ADF3BE /* IncidentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentViewViewModel.swift; sourceTree = "<group>"; };
 		CD5A18B22BD1034C00656EDF /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
+		CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchView.swift; sourceTree = "<group>"; };
+		CD5B9A942BD4B99B00714CCA /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
+		CD5B9A972BD4D67B00714CCA /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		CD834E152BC3FC1800C18624 /* ServiceDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeskApp.swift; sourceTree = "<group>"; };
 		CD834E1A2BC3FC1800C18624 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -108,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */,
+				CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */,
 				CD3F1B1C2BCB1B8900BDD3BC /* DepartmentItemView */,
 			);
 			path = DepartmentsView;
@@ -117,7 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				CD3D2EB72BC5535B000DB275 /* User.swift */,
-				CD493AF92BC91F550008A34B /* Company.swift */,
+				CD493AF92BC91F550008A34B /* Contact.swift */,
+				CD588AAA2BD6488F00ADF3BE /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -179,6 +195,32 @@
 			path = TaskCell;
 			sourceTree = "<group>";
 		};
+		CD5B9A932BD4B79F00714CCA /* AdvancedSearchView */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */,
+				CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */,
+			);
+			path = AdvancedSearchView;
+			sourceTree = "<group>";
+		};
+		CD5B9A962BD4B9A000714CCA /* IncidentView */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B9A942BD4B99B00714CCA /* IncidentView.swift */,
+				CD588AAE2BD6793F00ADF3BE /* IncidentViewViewModel.swift */,
+			);
+			path = IncidentView;
+			sourceTree = "<group>";
+		};
+		CD5B9A992BD4D67F00714CCA /* TaskView */ = {
+			isa = PBXGroup;
+			children = (
+				CD5B9A972BD4D67B00714CCA /* TaskView.swift */,
+			);
+			path = TaskView;
+			sourceTree = "<group>";
+		};
 		CD834E0C2BC3FC1800C18624 = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +245,10 @@
 				CD3D2EB02BC551E2000DB275 /* MainView */,
 				CD3D2EB62BC552C2000DB275 /* DepartmentsView */,
 				CD3F1B1F2BCB255000BDD3BC /* DepartmentDetailsView */,
+				CD5B9A962BD4B9A000714CCA /* IncidentView */,
 				CD3A7D512BCFAB4B00108768 /* TasksView */,
+				CD5B9A992BD4D67F00714CCA /* TaskView */,
+				CD5B9A932BD4B79F00714CCA /* AdvancedSearchView */,
 				CD3D2EB52BC552AE000DB275 /* ContactsView */,
 				CD3D2EBF2BC55923000DB275 /* ContactDetailsView */,
 				CD3D2EB92BC55360000DB275 /* Models */,
@@ -300,20 +345,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD493AFA2BC91F550008A34B /* Company.swift in Sources */,
+				CD493AFA2BC91F550008A34B /* Contact.swift in Sources */,
 				CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */,
 				CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */,
 				CD3D2EC62BC5612C000DB275 /* StorageManager.swift in Sources */,
+				CD588AAB2BD6488F00ADF3BE /* Task.swift in Sources */,
 				CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */,
+				CD5629B52BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift in Sources */,
+				CD5B9A922BD4B79C00714CCA /* AdvancedSearchView.swift in Sources */,
 				CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */,
 				CD3D2EB82BC5535B000DB275 /* User.swift in Sources */,
 				CD3A7D502BCFAB4700108768 /* TasksView.swift in Sources */,
 				CD3F1B162BCA826E00BDD3BC /* ContactsViewViewModel.swift in Sources */,
+				CD588AAF2BD6793F00ADF3BE /* IncidentViewViewModel.swift in Sources */,
+				CD588AAD2BD6562400ADF3BE /* DepartmentsViewViewModel.swift in Sources */,
 				CD3D2EC42BC56059000DB275 /* LoginViewViewModel.swift in Sources */,
 				CD3D2EC12BC55FBA000DB275 /* RootView.swift in Sources */,
 				CD3F1B182BCA9BEA00BDD3BC /* ContactCellView.swift in Sources */,
 				CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */,
 				CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */,
+				CD5B9A982BD4D67B00714CCA /* TaskView.swift in Sources */,
+				CD5B9A952BD4B99B00714CCA /* IncidentView.swift in Sources */,
 				CD3F1B1B2BCB1B8400BDD3BC /* DepartmentItemView.swift in Sources */,
 				CD3F1B1E2BCB254B00BDD3BC /* DepartmentDetailsView.swift in Sources */,
 				CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */,
