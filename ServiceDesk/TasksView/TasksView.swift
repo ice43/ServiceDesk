@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct TasksView: View {
-    let tasks: [Tasks]
     let title: String
+    let tasks: [CurrentTask]
     
     var body: some View {
         NavigationStack {
             List(tasks, id: \.number) { task in
-                NavigationLink(destination: TaskView(task: task, title: task.task)) {
+                NavigationLink(destination: TaskView(task: task, title: task.text)) {
                     TaskCellView(task: task)
                 }
             }
@@ -24,5 +24,5 @@ struct TasksView: View {
 }
 
 #Preview {
-    TasksView(tasks: Tasks.getTasks(), title: "Information Technology Department")
+    TasksView(title: "Information Technology Department", tasks: [CurrentTask.getTask()])
 }

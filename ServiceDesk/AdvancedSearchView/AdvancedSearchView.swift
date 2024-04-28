@@ -15,10 +15,10 @@ struct AdvancedSearchView: View {
     @State private var status = ""
     @State private var responsiblePerson = ""
     
-    @State private var filteredTasks: [Tasks] = []
+    @State private var filteredTasks: [CurrentTask] = []
     
     let title: String
-    let tasks: [Tasks]
+    let tasks: [CurrentTask]
     
     var body: some View {
         ScrollView {
@@ -70,7 +70,7 @@ struct AdvancedSearchView: View {
                 
                 
                 ForEach(filteredTasks, id: \.number) { task in
-                    NavigationLink(destination: TaskView(task: task, title: task.task)) {
+                    NavigationLink(destination: TaskView(task: task, title: task.text)) {
                         TaskCellView(task: task)
                             .foregroundStyle(.black)
                     }
@@ -86,7 +86,7 @@ struct AdvancedSearchView: View {
     private func filterRequests() {
         filteredTasks = tasks.filter { task in
             return task.author.localizedCaseInsensitiveContains(author) ||
-            task.task.localizedCaseInsensitiveContains(text) ||
+            task.text.localizedCaseInsensitiveContains(text) ||
             task.number.localizedCaseInsensitiveContains(number) ||
             task.date.localizedCaseInsensitiveContains(date) ||
             task.status.localizedCaseInsensitiveContains(status) ||
@@ -96,5 +96,5 @@ struct AdvancedSearchView: View {
 }
 
 #Preview {
-    AdvancedSearchView(title: "Advanced search", tasks: Tasks.getTasks())
+    AdvancedSearchView(title: "Advanced search", tasks: [CurrentTask.getTask()])
 }

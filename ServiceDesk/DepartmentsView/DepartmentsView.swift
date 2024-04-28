@@ -20,7 +20,7 @@ struct DepartmentsView: View {
                             NavigationLink(
                                 destination: DepartmentDetailsView(
                                     title: department.name,
-                                    departmentName: department)) {
+                                    department: department)) {
                                 DepartmentItemView(title: department.name)
                             }
                         }

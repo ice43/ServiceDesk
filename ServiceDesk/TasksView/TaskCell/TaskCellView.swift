@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskCellView: View {
-    let task: Tasks
+    let task: CurrentTask
     
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -23,7 +23,7 @@ struct TaskCellView: View {
                 Text(task.priority)
             }
             
-            Text(task.task)
+            Text(task.text)
                 .bold()
                 .lineLimit(1)
             
@@ -37,5 +37,5 @@ struct TaskCellView: View {
 }
 
 #Preview {
-    TaskCellView(task: Tasks.getTasks().first!)
+    TaskCellView(task: CurrentTask.getTask())
 }

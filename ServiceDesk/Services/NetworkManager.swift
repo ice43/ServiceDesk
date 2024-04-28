@@ -55,19 +55,5 @@ final class NetworkManager {
                 }
             }
     }
-    
-//    func fetchInfoForCreateTasks(from url: String, completion: @escaping (Result<[Department_], AFError>) -> ()) {
-//        AF.request(url)
-//            .validate()
-//            .responseDecodable(of: CompanyTasks.self) { response in
-//                switch response.result {
-//                case .success(let data):
-//                    let infoCreateTasks = data.departments
-//                    completion(.success(infoCreateTasks))
-//                case .failure(let error):
-//                    completion(.failure(error))
-//                }
-//            }
-//    }
 }
 

@@ -8,33 +8,29 @@
 import SwiftUI
 
 struct DepartmentDetailsView: View {
-    @State private var isShowingCreateAnIncident = false
-    @State private var isExpandedIncome = false
-    @State private var isExpandedOutgoing = false
-    @State private var isExpandedGroup = false
+    @StateObject private var departmentsDetailsViewVM = DepartmentDetailsViewViewModel()
     
     let title: String
-    let tasks = Tasks.getTasks()
-    let departmentName: DepartmentTask
+    let department: DepartmentTask
     
     var body: some View {
         Spacer()
         
-        Button(action: { isShowingCreateAnIncident = true } ) {
+        Button(action: { departmentsDetailsViewVM.isShowingCreateAnIncident = true } ) {
             Text("Create an incident")
                 .foregroundStyle(.white)
         }
         .frame(width: 200, height: 45)
         .background(.green)
         .clipShape(.capsule)
-        .sheet(isPresented: $isShowingCreateAnIncident) {
-            IncidentView(departmentName: departmentName)
+        .sheet(isPresented: $departmentsDetailsViewVM.isShowingCreateAnIncident) {
+            IncidentView(departmentName: department)
         }
         
         Spacer()
         
         VStack(alignment: .leading, spacing: 20) {            
-            NavigationLink(destination: TasksView(tasks: tasks, title: "Awaiting approval")) {
+            NavigationLink(destination: TasksView(title: "Awaiting approval", tasks: departmentsDetailsViewVM.awaitingApproval)) {
                 HStack {
                     Image(systemName: "hand.thumbsup")
                     Text("Awaiting approval")
@@ -45,107 +41,53 @@ struct DepartmentDetailsView: View {
                 Image(systemName: "arrowshape.turn.up.right")
                 Text("Incoming requests")
                 Image(systemName: "chevron.down")
-                    .rotationEffect(.degrees(isExpandedIncome ? 0 : 90))
+                    .rotationEffect(.degrees(departmentsDetailsViewVM.isExpandedTasks ? 0 : 90))
             }
             
-            if isExpandedIncome {
+            if departmentsDetailsViewVM.isExpandedTasks {
                 List {
                     NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Open"),
+                        destination: TasksView(title: "Open", tasks: departmentsDetailsViewVM.openTasks),
                         label: { Text("Open") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Completed"),
-                        label: { Text("Completed") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Closed"),
+                        destination: TasksView(title: "Closed", tasks: departmentsDetailsViewVM.closedTasks),
                         label: { Text("Closed") }
                     )
                     NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
-                        label: { Text("Motivated refusals") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Subscriptions"),
-                        label: { Text("Subscriptions") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Approval"),
-                        label: { Text("Approval") }
-                    )
-                }
-                .listStyle(.plain)
-            }
-            
-            
-            Button(action: showOutgoingRequests) {
-                Image(systemName: "arrowshape.turn.up.left")
-                Text("Outgoing requests")
-                Image(systemName: "chevron.down")
-                    .rotationEffect(.degrees(isExpandedOutgoing ? 0 : 90))
-            }
-            
-            if isExpandedOutgoing {
-                List {
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Open"),
-                        label: { Text("Open") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Completed"),
-                        label: { Text("Completed") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Closed"),
-                        label: { Text("Closed") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
+                        destination: TasksView(title: "Motivated refusals", tasks: departmentsDetailsViewVM.refusalTasks),
                         label: { Text("Motivated refusals") }
                     )
                 }
                 .listStyle(.plain)
             }
             
-            Button(action: showGroupRequests) {
-                Image(systemName: "folder")
-                Text("My group")
-                Image(systemName: "chevron.down")
-                    .rotationEffect(.degrees(isExpandedGroup ? 0 : 90))
-            }
+//            Button(action: showOutgoingRequests) {
+//                Image(systemName: "arrowshape.turn.up.left")
+//                Text("Outgoing requests")
+//                Image(systemName: "chevron.down")
+//                    .rotationEffect(.degrees(departmentsDetailsViewVM.isExpandedOutgoing ? 0 : 90))
+//            }
+//            
+//            if departmentsDetailsViewVM.isExpandedOutgoing {
+//                List {
+//                    NavigationLink(
+//                        destination: TasksView(title: "Open", tasks: departmentsDetailsViewVM.openOutgoing),
+//                        label: { Text("Open") }
+//                    )
+//                    NavigationLink(
+//                        destination: TasksView(title: "Closed", tasks: departmentsDetailsViewVM.closedOutgoing),
+//                        label: { Text("Closed") }
+//                    )
+//                    NavigationLink(
+//                        destination: TasksView(title: "Motivated refusals", tasks: departmentsDetailsViewVM.refusalsOutgoing),
+//                        label: { Text("Motivated refusals") }
+//                    )
+//                }
+//                .listStyle(.plain)
+//            }
             
-            if isExpandedGroup {
-                List {
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Open"),
-                        label: { Text("Open") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Completed"),
-                        label: { Text("Completed") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Closed"),
-                        label: { Text("Closed") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Motivated refusals"),
-                        label: { Text("Motivated refusals") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Subscriptions"),
-                        label: { Text("Subscriptions") }
-                    )
-                    NavigationLink(
-                        destination: TasksView(tasks: tasks, title: "Approval"),
-                        label: { Text("Approval") }
-                    )
-                }
-                .listStyle(.plain)
-            }
-            
-            NavigationLink(destination: AdvancedSearchView(title: "Advanced search", tasks: tasks)) {
+            NavigationLink(destination: AdvancedSearchView(title: "Advanced search", tasks: departmentsDetailsViewVM.openTasks)) {
                 Image(systemName: "magnifyingglass")
                 Text("Advanced search")
             }
@@ -153,6 +95,10 @@ struct DepartmentDetailsView: View {
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
         .navigationTitle(title)
+        .onAppear {
+            departmentsDetailsViewVM.fetchTasks(for: department.name)
+            showIncomingRequests()
+        }
         
         
         Spacer()
@@ -163,33 +109,22 @@ struct DepartmentDetailsView: View {
         Spacer()
         Spacer()
     }
-    
     
     func showIncomingRequests() {
         withAnimation {
-            isExpandedIncome.toggle()
+            departmentsDetailsViewVM.isExpandedTasks.toggle()
         }
-        isExpandedOutgoing = false
-        isExpandedGroup = false
+//        departmentsDetailsViewVM.isExpandedOutgoing = false
     }
     
-    func showOutgoingRequests() {
-        withAnimation {
-            isExpandedOutgoing.toggle()
-        }
-        isExpandedIncome = false
-        isExpandedGroup = false
-    }
-    
-    func showGroupRequests() {
-        withAnimation {
-            isExpandedGroup.toggle()
-        }
-        isExpandedIncome = false
-        isExpandedOutgoing = false
-    }
+//    func showOutgoingRequests() {
+//        withAnimation {
+//            departmentsDetailsViewVM.isExpandedOutgoing.toggle()
+//        }
+//        departmentsDetailsViewVM.isExpandedTasks = false
+//    }
 }
 
-//#Preview {
-//    DepartmentDetailsView(title: "IT Department", department: )
-//}
+#Preview {
+    DepartmentDetailsView(title: "IT Department", department: DepartmentTask.getDepartment())
+}

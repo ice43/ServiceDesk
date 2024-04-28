@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TaskView: View {
-    let task: Tasks
+    let task: CurrentTask
     let title: String
     
     var body: some View {
@@ -76,7 +76,7 @@ struct TaskView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
             
-            Text(task.task)
+            Text(task.text)
             
             Spacer()
         }
@@ -86,5 +86,5 @@ struct TaskView: View {
 }
 
 #Preview {
-    TaskView(task: Tasks.getTasks().first!, title: "Create active directory account for new accountant")
+    TaskView(task: CurrentTask.getTask(), title: "Create active directory account for new accountant")
 }

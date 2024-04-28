@@ -18,7 +18,7 @@ final class DepartmentsViewViewModel: ObservableObject {
             case .success(let departments):
                 self.departments = departments
             case .failure(let error):
-                print(error.localizedDescription)
+                print(error)
             }
         }
     }
