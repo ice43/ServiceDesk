@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DepartmentsView: View {
     @StateObject private var departmentsViewVM = DepartmentsViewViewModel()
+    @EnvironmentObject private var loginViewVM: LoginViewViewModel
      
     private let columns = [GridItem(.adaptive(minimum: 180, maximum: 180))]
     
@@ -27,6 +28,13 @@ struct DepartmentsView: View {
                     }
             }
             .navigationTitle("Service Desk")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(destination: ProfileView()) {
+                        Image(systemName: "gear")
+                    }
+                }
+            }
         }
         .onAppear {
             departmentsViewVM.fetchDepartments()

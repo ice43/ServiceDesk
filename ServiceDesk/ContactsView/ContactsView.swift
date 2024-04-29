@@ -28,6 +28,13 @@ struct ContactsView: View {
             }
             .navigationTitle("Contacts")
             .searchable(text: $contactsViewVM.searchText, prompt: "Look for a person")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    NavigationLink(destination: ProfileView()) {
+                        Image(systemName: "gear")
+                    }
+                }
+            }
         }
         .onAppear {
             contactsViewVM.fetchContacts()

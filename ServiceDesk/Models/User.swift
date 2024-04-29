@@ -7,9 +7,21 @@
 
 import Foundation
 
-struct User: Codable {
-    var name = "name"
-    var pass = "pass"
+struct User: Identifiable, Codable {
+    let id: String
+    let fullName: String
+    let email: String
+    let department: String
     
-    var isLogged = false
+    var initials: String {
+        let formatter = PersonNameComponentsFormatter()
+        
+        if let components = formatter.personNameComponents(from: fullName) {
+            formatter.style = .abbreviated
+            
+            return formatter.string(from: components)
+        }
+        
+        return ""
+    }
 }

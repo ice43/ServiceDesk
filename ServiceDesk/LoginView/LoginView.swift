@@ -11,48 +11,60 @@ struct LoginView: View {
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
     
     var body: some View {
-        Spacer()
-        
-        Image("logo")
-            .resizable()
-            .frame(width: 200, height: 200)
-        
-        Spacer()
-        
-        HStack(spacing: 10) {
-            VStack(alignment: .leading, spacing: 35) {
-                Text("Username")
-                Text("Password")
-            }
-            .padding(.leading, 30)
-            
-            VStack(alignment: .leading, spacing: 20) {
-                TextField("Required", text: $loginViewVM.user.name)
-                    .autocorrectionDisabled()
-                    .textInputAutocapitalization(.never)
-                    .textFieldStyle(.roundedBorder)
-                    .onAppear {
-                        UITextField.appearance().clearButtonMode = .whileEditing
-                    }
+        NavigationStack {
+            VStack {
+                Image("logo")
+                    .resizable()
+                    .frame(width: 200, height: 200)
                 
-                SecureField("Required", text: $loginViewVM.user.pass)
-                    .autocorrectionDisabled()
+                VStack(spacing: 24) {
+                    InputView(
+                        text: $loginViewVM.email,
+                        title: "Email address",
+                        placeholder: "name@example.com"
+                    )
                     .textInputAutocapitalization(.never)
-                    .textFieldStyle(.roundedBorder)
+                    
+                    InputView(
+                        text: $loginViewVM.password,
+                        title: "Password",
+                        placeholder: "Enter your password",
+                        isSecureField: true
+                    )
+                }
+                .padding()
+                
+                Button {
+                    Task {
+                        try await loginViewVM.signIn(
+                            withEmail: loginViewVM.email,
+                            password: loginViewVM.password
+                        )
+                    }
+                } label: {
+                    Text("Sign in")
+                        .foregroundStyle(.white)
+                }
+                .frame(width: 120, height: 45)
+                .background(.ascp)
+                .clipShape(.capsule)
+                .padding(.top, 20)
+                
+                Spacer()
+                            
+                NavigationLink {
+                    RegistrationView()
+                        .navigationBarBackButtonHidden()
+                } label: {
+                    HStack(spacing: 3) {
+                        Text("Don't have an account?")
+                        Text("Sign up")
+                            .fontWeight(.bold)
+                    }
+                    .font(.system(size: 14))
+                }
             }
-            .padding(.trailing, 30)
         }
-        
-        Button(action: loginViewVM.openMainView ) {
-            Text("Log in")
-                .foregroundStyle(.white)
-        }
-        .frame(width: 120, height: 45)
-        .background(.ascp)
-        .clipShape(.capsule)
-        .padding(.top, 20)
-        
-        Spacer(minLength: 270)
     }
 }
 

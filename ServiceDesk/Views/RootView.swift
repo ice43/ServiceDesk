@@ -11,7 +11,7 @@ struct RootView: View {
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
     
     var body: some View {
-        if loginViewVM.user.isLogged {
+        if loginViewVM.userSession != nil {
             MainView()
         } else {
             LoginView()

@@ -41,7 +41,7 @@ struct IncidentView: View {
                 Button(action: { incidentViewVM.textPriority = "Default"} ) {
                     Text("Default")
                 }
-                Button(action: { incidentViewVM.textPriority = "second"} ) {
+                Button(action: { incidentViewVM.textPriority = "Important"} ) {
                     Text("Important")
                 }
 
@@ -52,7 +52,6 @@ struct IncidentView: View {
             }
             
             Text("Categories")
-            
             Menu {
                 ForEach(incidentViewVM.categories, id: \.self) { nameCategory in
                     Button(action: {
