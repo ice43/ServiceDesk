@@ -31,7 +31,7 @@ struct ContactsView: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     NavigationLink(destination: ProfileView()) {
-                        Image(systemName: "gear")
+                        Image(systemName: "gearshape")
                     }
                 }
             }

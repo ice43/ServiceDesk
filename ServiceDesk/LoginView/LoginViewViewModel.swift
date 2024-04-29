@@ -9,13 +9,20 @@ import Foundation
 import Firebase
 import FirebaseFirestoreSwift
 
+protocol AuthenticationFormProtocol {
+    var formIsValid: Bool { get }
+}
+
 @MainActor
 final class LoginViewViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
     @Published var email: String = ""
     @Published var password: String = ""
-    
+    @Published var isEmailTaken = false
+    @Published var showAlert = false
+    @Published var alertMessage = ""
+
     init() {
         userSession = Auth.auth().currentUser
         
@@ -29,8 +36,18 @@ final class LoginViewViewModel: ObservableObject {
             let result = try await Auth.auth().signIn(withEmail: email, password: password)
             userSession = result.user
             await fetchUser()
+            
+            self.email = ""
+            self.password = ""
         } catch {
-            print("Failed to log in with error: \(error)")
+            showAlert.toggle()
+            alertMessage = error.localizedDescription
+        }
+    }
+    
+    func signIn() {
+        Task {
+            try await signIn(withEmail: email, password: password)
         }
     }
     
@@ -50,7 +67,8 @@ final class LoginViewViewModel: ObservableObject {
             try await Firestore.firestore().collection("users").document(user.id).setData(encodedUser)
             await fetchUser()
         } catch {
-            print(error)
+            isEmailTaken.toggle()
+            alertMessage = error.localizedDescription
         }
     }
     
@@ -64,13 +82,37 @@ final class LoginViewViewModel: ObservableObject {
         }
     }
     
-    func deleteAccount() {
+    func deleteAccount() async throws {
+        guard let currentUser = Auth.auth().currentUser else { return }
         
+        do {
+            try await Firestore.firestore().collection("users").document(currentUser.uid).delete()
+            try await currentUser.delete()
+            signOut()
+        } catch {
+            print("Failed to delete current user with error: \(error)")
+        }
+    }
+    
+    func delete() {
+        Task {
+            try await deleteAccount()
+        }
     }
     
     func fetchUser() async {
         guard let uid = Auth.auth().currentUser?.uid else { return }
         guard let snapshot = try? await Firestore.firestore().collection("users").document(uid).getDocument() else { return }
         currentUser = try? snapshot.data(as: User.self)
+    }
+}
+
+// MARK: - AuthenticationFormProtocol
+extension LoginViewViewModel: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty
+        && email.contains("@")
+        && !password.isEmpty
+        && password.count > 5
     }
 }

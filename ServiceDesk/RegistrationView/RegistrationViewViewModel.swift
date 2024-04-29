@@ -18,6 +18,13 @@ final class RegistrationViewViewModel: ObservableObject {
     
     private let networkManager = NetworkManager.shared
     
+    var isValidPass: Bool {
+        return password.count > 5
+        && password == confirmPassword
+        && !password.isEmpty
+        && !confirmPassword.isEmpty
+    }
+    
     func fetchDepartments() {
         networkManager.fetchTasks(from: Link.tasks.url) { result in
             switch result {
@@ -27,5 +34,18 @@ final class RegistrationViewViewModel: ObservableObject {
                 print(error)
             }
         }
+    }
+}
+
+// MARK: - AuthenticationFormProtocol
+extension RegistrationViewViewModel: AuthenticationFormProtocol {
+    var formIsValid: Bool {
+        return !email.isEmpty
+        && email.contains("@")
+        && !fullName.isEmpty
+        && !textDepartment.isEmpty
+        && !password.isEmpty
+        && password.count > 5
+        && confirmPassword == password
     }
 }

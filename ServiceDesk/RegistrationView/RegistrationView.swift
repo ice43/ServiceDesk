@@ -56,7 +56,7 @@ struct RegistrationView: View {
                 InputView(
                     text: $registrationViewVM.password,
                     title: "Password",
-                    placeholder: "Enter your password",
+                    placeholder: "Must be at least 6 characters long",
                     isSecureField: true
                 )
                 
@@ -64,7 +64,8 @@ struct RegistrationView: View {
                     text: $registrationViewVM.confirmPassword,
                     title: "Confirm password",
                     placeholder: "Confirm your password",
-                    isSecureField: true
+                    isSecureField: true,
+                    showCheckmark: registrationViewVM.isValidPass
                 )
             }
             .padding()
@@ -86,6 +87,9 @@ struct RegistrationView: View {
             .background(.ascp)
             .clipShape(.capsule)
             .padding(.top, 20)
+            .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.isEmailTaken, actions: {} )
+            .disabled(!registrationViewVM.formIsValid)
+            .opacity(registrationViewVM.formIsValid ? 1 : 0.5)
             
             Spacer()
             
@@ -96,6 +100,7 @@ struct RegistrationView: View {
                         .fontWeight(.bold)
                 }
                 .font(.system(size: 14))
+                .foregroundStyle(.ascp)
             }
             .onAppear {
                 registrationViewVM.fetchDepartments()
@@ -106,4 +111,5 @@ struct RegistrationView: View {
 
 #Preview {
     RegistrationView()
+        .environmentObject(LoginViewViewModel())
 }

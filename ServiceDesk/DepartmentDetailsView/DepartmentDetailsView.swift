@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DepartmentDetailsView: View {
     @StateObject private var departmentsDetailsViewVM = DepartmentDetailsViewViewModel()
+    @EnvironmentObject private var loginViewVM: LoginViewViewModel
     
     let title: String
     let department: DepartmentTask
@@ -37,9 +38,13 @@ struct DepartmentDetailsView: View {
                 }
             }
             
-            Button(action: showIncomingRequests) {
-                Image(systemName: "arrowshape.turn.up.right")
-                Text("Incoming requests")
+            Button(action: showRequests) {
+                Image(systemName: loginViewVM.currentUser?.department == department.name
+                      ? "arrowshape.turn.up.right"
+                      : "arrowshape.turn.up.left")
+                Text(loginViewVM.currentUser?.department == department.name
+                     ? "Incoming requests"
+                     : "Outgoing requests")
                 Image(systemName: "chevron.down")
                     .rotationEffect(.degrees(departmentsDetailsViewVM.isExpandedTasks ? 0 : 90))
             }
@@ -97,7 +102,7 @@ struct DepartmentDetailsView: View {
         .navigationTitle(title)
         .onAppear {
             departmentsDetailsViewVM.fetchTasks(for: department.name)
-            showIncomingRequests()
+            showRequests()
         }
         
         
@@ -110,7 +115,7 @@ struct DepartmentDetailsView: View {
         Spacer()
     }
     
-    func showIncomingRequests() {
+    func showRequests() {
         withAnimation {
             departmentsDetailsViewVM.isExpandedTasks.toggle()
         }
@@ -127,4 +132,5 @@ struct DepartmentDetailsView: View {
 
 #Preview {
     DepartmentDetailsView(title: "IT Department", department: DepartmentTask.getDepartment())
+        .environmentObject(LoginViewViewModel())
 }

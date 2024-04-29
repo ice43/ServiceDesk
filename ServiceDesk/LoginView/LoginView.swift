@@ -12,6 +12,9 @@ struct LoginView: View {
     
     var body: some View {
         NavigationStack {
+            Spacer()
+            Spacer()
+            
             VStack {
                 Image("logo")
                     .resizable()
@@ -35,12 +38,7 @@ struct LoginView: View {
                 .padding()
                 
                 Button {
-                    Task {
-                        try await loginViewVM.signIn(
-                            withEmail: loginViewVM.email,
-                            password: loginViewVM.password
-                        )
-                    }
+                    loginViewVM.signIn()
                 } label: {
                     Text("Sign in")
                         .foregroundStyle(.white)
@@ -49,6 +47,9 @@ struct LoginView: View {
                 .background(.ascp)
                 .clipShape(.capsule)
                 .padding(.top, 20)
+                .disabled(!loginViewVM.formIsValid)
+                .opacity(loginViewVM.formIsValid ? 1 : 0.5)
+                .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.showAlert, actions: {} )
                 
                 Spacer()
                             
@@ -62,12 +63,12 @@ struct LoginView: View {
                             .fontWeight(.bold)
                     }
                     .font(.system(size: 14))
+                    .foregroundStyle(.ascp)
                 }
             }
         }
     }
 }
-
 
 #Preview {
     LoginView()
