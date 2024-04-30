@@ -10,7 +10,7 @@ import SwiftUI
 struct RegistrationView: View {
     @EnvironmentObject private var loginViewVM: LoginViewViewModel
     @StateObject private var registrationViewVM = RegistrationViewViewModel()
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     
     var body: some View {
         ScrollView {
@@ -36,14 +36,6 @@ struct RegistrationView: View {
             .onAppear {
                 registrationViewVM.fetchDepartments()
             }
-        }
-        .onTapGesture {
-            UIApplication.shared.sendAction(
-                #selector(UIResponder.resignFirstResponder),
-                to: nil,
-                from: nil,
-                for: nil
-            )
         }
     }
     

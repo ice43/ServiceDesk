@@ -25,7 +25,9 @@ struct RegistrationInputViews: View {
                 placeholder: "Enter your name"
             )
             
-            ListDepartments(registrationViewVM: registrationViewVM)
+            ListDepartments(
+                registrationViewVM: registrationViewVM
+            )
             
             InputView(
                 text: $registrationViewVM.password,
