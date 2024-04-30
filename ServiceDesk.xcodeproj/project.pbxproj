@@ -70,7 +70,22 @@
 		CD5B9A982BD4D67B00714CCA /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A972BD4D67B00714CCA /* TaskDetailsView.swift */; };
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
 		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
+		CD9B24FF2BE14A590067891A /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF72BC91CDE0008A34B /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		CD9B25002BE14A590067891A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CD9B24FF2BE14A590067891A /* AlamofireDynamic in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CD3A7D4F2BCFAB4700108768 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
@@ -449,6 +464,7 @@
 				CD834E112BC3FC1800C18624 /* Sources */,
 				CD834E122BC3FC1800C18624 /* Frameworks */,
 				CD4963D12BDF9B10003DCF08 /* Resources */,
+				CD9B25002BE14A590067891A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

@@ -14,7 +14,7 @@ struct FilteredTasksSection: View {
         ForEach(advancedSearchViewVM.filteredTasks, id: \.number) { task in
             NavigationLink(destination: TaskDetailsView(task: task, title: task.text)) {
                 TaskCellView(task: task)
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.foreground)
             }
             Divider()
         }
