@@ -14,7 +14,7 @@ An application that allows you to create and track the execution of applications
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/2a1323ea-8a33-4bd5-9837-fe7a947eb69c" width="255" height="550"/>
 
 ## Departments, details departments, create an incident screens
-<img src="https://github.com/ice43/ServiceDesk/assets/92436401/1d693649-6664-4c41-9231-eaff79f06e69" width="255" height="550"/> 
+<img src="https://github.com/ice43/ServiceDesk/assets/92436401/92d38f0c-7a9c-48d6-9555-8b2039f23a62" width="255" height="550"/>
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/767d1e6e-2104-4ef2-a7fb-1995e255d6dc" width="255" height="550"/> 
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/03d376f8-943c-45dd-8da1-899c9386a591" width="255" height="550"/> 
 
@@ -25,7 +25,7 @@ An application that allows you to create and track the execution of applications
 
 ## Contacts and contact details screens
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/ca022696-21b2-4629-8d67-e35c797a5892" width="255" height="550"/>
-<img src="https://github.com/ice43/ServiceDesk/assets/92436401/92d38f0c-7a9c-48d6-9555-8b2039f23a62" width="255" height="550"/>
+<img src="https://github.com/ice43/ServiceDesk/assets/92436401/1d693649-6664-4c41-9231-eaff79f06e69" width="255" height="550"/> 
 
 ## Dark theme support
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/60f691e1-8bd2-4845-acf4-7b8a8aae4693" width="255" height="550"/>
