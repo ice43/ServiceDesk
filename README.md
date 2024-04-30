@@ -8,7 +8,8 @@ An application that allows you to create and track the execution of applications
 - Getting data from a **JSON** located on a remote resource using **Alamofire**
 - **SearchBar**, TabView, List, **Grid**, Custom List Cell, Custom Grid Item and more are used.
 
-![tasks](https://github.com/ice43/ServiceDesk/assets/92436401/a5d515d4-16e0-45bc-99cc-e4eeb126b14f):/250x100
+<img src="https://github.com/ice43/ServiceDesk/assets/92436401/a5d515d4-16e0-45bc-99cc-e4eeb126b14f" width="250" height="550"/>
+![tasks](https://github.com/ice43/ServiceDesk/assets/92436401/a5d515d4-16e0-45bc-99cc-e4eeb126b14f)
 ![registration](https://github.com/ice43/ServiceDesk/assets/92436401/fdc27e31-95ad-4bae-9cb7-6707b087f679)
 ![profileview](https://github.com/ice43/ServiceDesk/assets/92436401/2a1323ea-8a33-4bd5-9837-fe7a947eb69c)
 ![login](https://github.com/ice43/ServiceDesk/assets/92436401/90029352-8248-4857-bb12-da62bb83ae3f)
