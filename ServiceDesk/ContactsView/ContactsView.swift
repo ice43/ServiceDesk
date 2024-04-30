@@ -12,31 +12,25 @@ struct ContactsView: View {
     
     var body: some View {
         NavigationStack {
-            List(contactsViewVM.filteredDepartments, id: \.id) { department in
-                Section {
-                    ForEach(department.members, id: \.name) { contact in
-                        NavigationLink(destination: ContactDetailsView(contact: contact)) {
-                            ContactCellView(contact: contact)
+            if contactsViewVM.isLoading {
+                ProgressView()
+            } else {
+                ContactList(contactsViewVM: contactsViewVM)
+                .navigationTitle("Contacts")
+                .searchable(text: $contactsViewVM.searchText, prompt: "Look for a person")
+                .toolbar {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NavigationLink(destination: ProfileView()) {
+                            Image(systemName: "gearshape")
                         }
-                    }
-                } header: {
-                    Text(department.name)
-                        .fixedSize(horizontal: false, vertical: true)
-                        .padding(.bottom, 10)
-                }
-                
-            }
-            .navigationTitle("Contacts")
-            .searchable(text: $contactsViewVM.searchText, prompt: "Look for a person")
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    NavigationLink(destination: ProfileView()) {
-                        Image(systemName: "gearshape")
                     }
                 }
             }
         }
         .onAppear {
+            contactsViewVM.fetchContacts()
+        }
+        .refreshable {
             contactsViewVM.fetchContacts()
         }
     }

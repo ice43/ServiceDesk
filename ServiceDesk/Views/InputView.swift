@@ -9,8 +9,10 @@ import SwiftUI
 
 struct InputView: View {
     @Binding var text: String
+    
     let title: String
     let placeholder: String
+    
     var isSecureField = false
     var showCheckmark = false
     
@@ -32,6 +34,7 @@ struct InputView: View {
             if isSecureField {
                 SecureField(placeholder, text: $text)
                     .font(.system(size: 14))
+                    .autocorrectionDisabled()
             } else {
                 TextField(placeholder, text: $text)
                     .font(.system(size: 14))

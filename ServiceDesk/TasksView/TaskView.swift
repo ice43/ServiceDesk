@@ -1,5 +1,5 @@
 //
-//  TasksView.swift
+//  TaskView.swift
 //  ServiceDesk
 //
 //  Created by Serge Broski on 4/17/24.
@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct TasksView: View {
+struct TaskView: View {
     let title: String
     let tasks: [CurrentTask]
     
     var body: some View {
         NavigationStack {
             List(tasks, id: \.number) { task in
-                NavigationLink(destination: TaskView(task: task, title: task.text)) {
+                NavigationLink(destination: TaskDetailsView(task: task, title: task.text)) {
                     TaskCellView(task: task)
                 }
             }
@@ -24,5 +24,8 @@ struct TasksView: View {
 }
 
 #Preview {
-    TasksView(title: "Information Technology Department", tasks: [CurrentTask.getTask()])
+    TaskView(
+        title: "Information Technology Department",
+        tasks: [CurrentTask.getTask()]
+    )
 }

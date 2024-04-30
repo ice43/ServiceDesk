@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CD3A7D502BCFAB4700108768 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A7D4F2BCFAB4700108768 /* TasksView.swift */; };
+		CD3A7D502BCFAB4700108768 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A7D4F2BCFAB4700108768 /* TaskView.swift */; };
 		CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EAE2BC551D8000DB275 /* MainView.swift */; };
 		CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB12BC55279000DB275 /* ContactsView.swift */; };
 		CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */; };
@@ -35,6 +35,31 @@
 		CD4963D62BDFA5F1003DCF08 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CD4963D52BDFA5F1003DCF08 /* FirebaseFirestoreSwift */; };
 		CD4963D82BDFA649003DCF08 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CD4963D72BDFA649003DCF08 /* FirebaseFirestore */; };
 		CD4964C12BDFE497003DCF08 /* RegistrationViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964C02BDFE497003DCF08 /* RegistrationViewViewModel.swift */; };
+		CD4964C52BE0F4A2003DCF08 /* BlueButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964C42BE0F4A2003DCF08 /* BlueButtonView.swift */; };
+		CD4964C72BE0FE14003DCF08 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964C62BE0FE14003DCF08 /* LogoView.swift */; };
+		CD4964C92BE0FE8D003DCF08 /* RegistrationInputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964C82BE0FE8D003DCF08 /* RegistrationInputViews.swift */; };
+		CD4964CC2BE0FF83003DCF08 /* ListDepartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964CB2BE0FF83003DCF08 /* ListDepartments.swift */; };
+		CD4964CE2BE10168003DCF08 /* SignInButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964CD2BE10168003DCF08 /* SignInButtonView.swift */; };
+		CD4964D02BE10276003DCF08 /* LoginInputViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964CF2BE10276003DCF08 /* LoginInputViews.swift */; };
+		CD4964D32BE1052B003DCF08 /* SignUpButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964D22BE1052B003DCF08 /* SignUpButtonView.swift */; };
+		CD4964D72BE10AEC003DCF08 /* CreateIncidentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964D62BE10AEC003DCF08 /* CreateIncidentButton.swift */; };
+		CD4964DA2BE10DB3003DCF08 /* TasksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964D92BE10DB3003DCF08 /* TasksSection.swift */; };
+		CD4964DC2BE11052003DCF08 /* AdvancedSearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964DB2BE11052003DCF08 /* AdvancedSearchSection.swift */; };
+		CD4964DE2BE110AB003DCF08 /* AwaitingApprovalSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964DD2BE110AB003DCF08 /* AwaitingApprovalSection.swift */; };
+		CD4964E02BE11141003DCF08 /* ExpandedTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964DF2BE11141003DCF08 /* ExpandedTasks.swift */; };
+		CD4964E22BE1134F003DCF08 /* IncidentButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964E12BE1134F003DCF08 /* IncidentButtons.swift */; };
+		CD4964E52BE115DD003DCF08 /* PrioritySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964E42BE115DD003DCF08 /* PrioritySectionView.swift */; };
+		CD4964E72BE1164C003DCF08 /* CategorySectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964E62BE1164C003DCF08 /* CategorySectionView.swift */; };
+		CD4964E92BE116B9003DCF08 /* DetailSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964E82BE116B9003DCF08 /* DetailSectionView.swift */; };
+		CD4964EB2BE11710003DCF08 /* DescriptionSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964EA2BE11710003DCF08 /* DescriptionSectionView.swift */; };
+		CD4964ED2BE11763003DCF08 /* IncidentSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964EC2BE11763003DCF08 /* IncidentSections.swift */; };
+		CD4964EF2BE118DA003DCF08 /* TaskNumberSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964EE2BE118DA003DCF08 /* TaskNumberSection.swift */; };
+		CD4964F42BE11A10003DCF08 /* TaskDetailsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964F32BE11A10003DCF08 /* TaskDetailsSection.swift */; };
+		CD4964F62BE11AE7003DCF08 /* TaskDescriptionSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964F52BE11AE7003DCF08 /* TaskDescriptionSection.swift */; };
+		CD4964F82BE1201C003DCF08 /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964F72BE1201C003DCF08 /* SearchFieldView.swift */; };
+		CD4964FB2BE121C7003DCF08 /* FilteredTasksSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964FA2BE121C7003DCF08 /* FilteredTasksSection.swift */; };
+		CD4964FD2BE12505003DCF08 /* SearchSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964FC2BE12505003DCF08 /* SearchSection.swift */; };
+		CD4964FF2BE12634003DCF08 /* ContactList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4964FE2BE12634003DCF08 /* ContactList.swift */; };
 		CD5629B52BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */; };
 		CD588AAB2BD6488F00ADF3BE /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD588AAA2BD6488F00ADF3BE /* Task.swift */; };
 		CD588AAD2BD6562400ADF3BE /* DepartmentsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */; };
@@ -42,13 +67,13 @@
 		CD5A18B32BD1034C00656EDF /* TaskCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5A18B22BD1034C00656EDF /* TaskCellView.swift */; };
 		CD5B9A922BD4B79C00714CCA /* AdvancedSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */; };
 		CD5B9A952BD4B99B00714CCA /* IncidentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A942BD4B99B00714CCA /* IncidentView.swift */; };
-		CD5B9A982BD4D67B00714CCA /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A972BD4D67B00714CCA /* TaskView.swift */; };
+		CD5B9A982BD4D67B00714CCA /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A972BD4D67B00714CCA /* TaskDetailsView.swift */; };
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
 		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CD3A7D4F2BCFAB4700108768 /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
+		CD3A7D4F2BCFAB4700108768 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		CD3D2EAE2BC551D8000DB275 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		CD3D2EB12BC55279000DB275 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsView.swift; sourceTree = "<group>"; };
@@ -69,6 +94,31 @@
 		CD4963BF2BDF8B48003DCF08 /* SettingsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRowView.swift; sourceTree = "<group>"; };
 		CD4963C12BDF945B003DCF08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "ServiceDesk/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CD4964C02BDFE497003DCF08 /* RegistrationViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewViewModel.swift; sourceTree = "<group>"; };
+		CD4964C42BE0F4A2003DCF08 /* BlueButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueButtonView.swift; sourceTree = "<group>"; };
+		CD4964C62BE0FE14003DCF08 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		CD4964C82BE0FE8D003DCF08 /* RegistrationInputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationInputViews.swift; sourceTree = "<group>"; };
+		CD4964CB2BE0FF83003DCF08 /* ListDepartments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartments.swift; sourceTree = "<group>"; };
+		CD4964CD2BE10168003DCF08 /* SignInButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButtonView.swift; sourceTree = "<group>"; };
+		CD4964CF2BE10276003DCF08 /* LoginInputViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputViews.swift; sourceTree = "<group>"; };
+		CD4964D22BE1052B003DCF08 /* SignUpButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButtonView.swift; sourceTree = "<group>"; };
+		CD4964D62BE10AEC003DCF08 /* CreateIncidentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateIncidentButton.swift; sourceTree = "<group>"; };
+		CD4964D92BE10DB3003DCF08 /* TasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksSection.swift; sourceTree = "<group>"; };
+		CD4964DB2BE11052003DCF08 /* AdvancedSearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchSection.swift; sourceTree = "<group>"; };
+		CD4964DD2BE110AB003DCF08 /* AwaitingApprovalSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwaitingApprovalSection.swift; sourceTree = "<group>"; };
+		CD4964DF2BE11141003DCF08 /* ExpandedTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandedTasks.swift; sourceTree = "<group>"; };
+		CD4964E12BE1134F003DCF08 /* IncidentButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentButtons.swift; sourceTree = "<group>"; };
+		CD4964E42BE115DD003DCF08 /* PrioritySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritySectionView.swift; sourceTree = "<group>"; };
+		CD4964E62BE1164C003DCF08 /* CategorySectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorySectionView.swift; sourceTree = "<group>"; };
+		CD4964E82BE116B9003DCF08 /* DetailSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSectionView.swift; sourceTree = "<group>"; };
+		CD4964EA2BE11710003DCF08 /* DescriptionSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionSectionView.swift; sourceTree = "<group>"; };
+		CD4964EC2BE11763003DCF08 /* IncidentSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentSections.swift; sourceTree = "<group>"; };
+		CD4964EE2BE118DA003DCF08 /* TaskNumberSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskNumberSection.swift; sourceTree = "<group>"; };
+		CD4964F32BE11A10003DCF08 /* TaskDetailsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsSection.swift; sourceTree = "<group>"; };
+		CD4964F52BE11AE7003DCF08 /* TaskDescriptionSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDescriptionSection.swift; sourceTree = "<group>"; };
+		CD4964F72BE1201C003DCF08 /* SearchFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFieldView.swift; sourceTree = "<group>"; };
+		CD4964FA2BE121C7003DCF08 /* FilteredTasksSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredTasksSection.swift; sourceTree = "<group>"; };
+		CD4964FC2BE12505003DCF08 /* SearchSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSection.swift; sourceTree = "<group>"; };
+		CD4964FE2BE12634003DCF08 /* ContactList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactList.swift; sourceTree = "<group>"; };
 		CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchViewViewModel.swift; sourceTree = "<group>"; };
 		CD588AAA2BD6488F00ADF3BE /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentsViewViewModel.swift; sourceTree = "<group>"; };
@@ -76,7 +126,7 @@
 		CD5A18B22BD1034C00656EDF /* TaskCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCellView.swift; sourceTree = "<group>"; };
 		CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvancedSearchView.swift; sourceTree = "<group>"; };
 		CD5B9A942BD4B99B00714CCA /* IncidentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentView.swift; sourceTree = "<group>"; };
-		CD5B9A972BD4D67B00714CCA /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		CD5B9A972BD4D67B00714CCA /* TaskDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDetailsView.swift; sourceTree = "<group>"; };
 		CD834E152BC3FC1800C18624 /* ServiceDesk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ServiceDesk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceDeskApp.swift; sourceTree = "<group>"; };
 		CD834E1A2BC3FC1800C18624 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -103,7 +153,7 @@
 		CD3A7D512BCFAB4B00108768 /* TasksView */ = {
 			isa = PBXGroup;
 			children = (
-				CD3A7D4F2BCFAB4700108768 /* TasksView.swift */,
+				CD3A7D4F2BCFAB4700108768 /* TaskView.swift */,
 				CD5A18B42BD1035200656EDF /* TaskCell */,
 			);
 			path = TasksView;
@@ -114,6 +164,7 @@
 			children = (
 				CD834E1A2BC3FC1800C18624 /* LoginView.swift */,
 				CD3D2EC32BC56059000DB275 /* LoginViewViewModel.swift */,
+				CD4964D12BE1027A003DCF08 /* Views */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -131,7 +182,7 @@
 			children = (
 				CD3D2EB12BC55279000DB275 /* ContactsView.swift */,
 				CD3F1B152BCA826E00BDD3BC /* ContactsViewViewModel.swift */,
-				CD3F1B192BCA9BF600BDD3BC /* ContactCell */,
+				CD3F1B192BCA9BF600BDD3BC /* Views */,
 			);
 			path = ContactsView;
 			sourceTree = "<group>";
@@ -141,7 +192,7 @@
 			children = (
 				CD3D2EB32BC552A4000DB275 /* DepartmentsView.swift */,
 				CD588AAC2BD6562400ADF3BE /* DepartmentsViewViewModel.swift */,
-				CD3F1B1C2BCB1B8900BDD3BC /* DepartmentItemView */,
+				CD3F1B1C2BCB1B8900BDD3BC /* Views */,
 			);
 			path = DepartmentsView;
 			sourceTree = "<group>";
@@ -177,25 +228,28 @@
 			children = (
 				CD3D2EC02BC55FBA000DB275 /* RootView.swift */,
 				CD4963B72BDF7C90003DCF08 /* InputView.swift */,
+				CD4964C62BE0FE14003DCF08 /* LogoView.swift */,
 				CD4963BF2BDF8B48003DCF08 /* SettingsRowView.swift */,
+				CD4964C42BE0F4A2003DCF08 /* BlueButtonView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		CD3F1B192BCA9BF600BDD3BC /* ContactCell */ = {
+		CD3F1B192BCA9BF600BDD3BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CD4964FE2BE12634003DCF08 /* ContactList.swift */,
 				CD3F1B172BCA9BEA00BDD3BC /* ContactCellView.swift */,
 			);
-			path = ContactCell;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		CD3F1B1C2BCB1B8900BDD3BC /* DepartmentItemView */ = {
+		CD3F1B1C2BCB1B8900BDD3BC /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				CD3F1B1A2BCB1B8400BDD3BC /* DepartmentItemView.swift */,
 			);
-			path = DepartmentItemView;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CD3F1B1F2BCB255000BDD3BC /* DepartmentDetailsView */ = {
@@ -203,6 +257,7 @@
 			children = (
 				CD3F1B1D2BCB254B00BDD3BC /* DepartmentDetailsView.swift */,
 				CD45C0952BDA4E4900D9984E /* DepartmentDetailsViewViewModel.swift */,
+				CD4964D82BE10AF5003DCF08 /* Views */,
 			);
 			path = DepartmentDetailsView;
 			sourceTree = "<group>";
@@ -212,6 +267,7 @@
 			children = (
 				CD4963B92BDF813C003DCF08 /* RegistrationView.swift */,
 				CD4964C02BDFE497003DCF08 /* RegistrationViewViewModel.swift */,
+				CD4964CA2BE0FF57003DCF08 /* Views */,
 			);
 			path = RegistrationView;
 			sourceTree = "<group>";
@@ -231,6 +287,70 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD4964CA2BE0FF57003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964C82BE0FE8D003DCF08 /* RegistrationInputViews.swift */,
+				CD4964CB2BE0FF83003DCF08 /* ListDepartments.swift */,
+				CD4964CD2BE10168003DCF08 /* SignInButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4964D12BE1027A003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964CF2BE10276003DCF08 /* LoginInputViews.swift */,
+				CD4964D22BE1052B003DCF08 /* SignUpButtonView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4964D82BE10AF5003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964D62BE10AEC003DCF08 /* CreateIncidentButton.swift */,
+				CD4964D92BE10DB3003DCF08 /* TasksSection.swift */,
+				CD4964DD2BE110AB003DCF08 /* AwaitingApprovalSection.swift */,
+				CD4964DF2BE11141003DCF08 /* ExpandedTasks.swift */,
+				CD4964DB2BE11052003DCF08 /* AdvancedSearchSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4964E32BE1135B003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964E12BE1134F003DCF08 /* IncidentButtons.swift */,
+				CD4964EC2BE11763003DCF08 /* IncidentSections.swift */,
+				CD4964E42BE115DD003DCF08 /* PrioritySectionView.swift */,
+				CD4964E62BE1164C003DCF08 /* CategorySectionView.swift */,
+				CD4964E82BE116B9003DCF08 /* DetailSectionView.swift */,
+				CD4964EA2BE11710003DCF08 /* DescriptionSectionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4964F02BE118DE003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964EE2BE118DA003DCF08 /* TaskNumberSection.swift */,
+				CD4964F32BE11A10003DCF08 /* TaskDetailsSection.swift */,
+				CD4964F52BE11AE7003DCF08 /* TaskDescriptionSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD4964F92BE12025003DCF08 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD4964FC2BE12505003DCF08 /* SearchSection.swift */,
+				CD4964F72BE1201C003DCF08 /* SearchFieldView.swift */,
+				CD4964FA2BE121C7003DCF08 /* FilteredTasksSection.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		CD5A18B42BD1035200656EDF /* TaskCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +364,7 @@
 			children = (
 				CD5B9A912BD4B79C00714CCA /* AdvancedSearchView.swift */,
 				CD5629B42BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift */,
+				CD4964F92BE12025003DCF08 /* Views */,
 			);
 			path = AdvancedSearchView;
 			sourceTree = "<group>";
@@ -253,16 +374,18 @@
 			children = (
 				CD5B9A942BD4B99B00714CCA /* IncidentView.swift */,
 				CD588AAE2BD6793F00ADF3BE /* IncidentViewViewModel.swift */,
+				CD4964E32BE1135B003DCF08 /* Views */,
 			);
 			path = IncidentView;
 			sourceTree = "<group>";
 		};
-		CD5B9A992BD4D67F00714CCA /* TaskView */ = {
+		CD5B9A992BD4D67F00714CCA /* TaskDetailView */ = {
 			isa = PBXGroup;
 			children = (
-				CD5B9A972BD4D67B00714CCA /* TaskView.swift */,
+				CD5B9A972BD4D67B00714CCA /* TaskDetailsView.swift */,
+				CD4964F02BE118DE003DCF08 /* Views */,
 			);
-			path = TaskView;
+			path = TaskDetailView;
 			sourceTree = "<group>";
 		};
 		CD834E0C2BC3FC1800C18624 = {
@@ -294,7 +417,7 @@
 				CD3F1B1F2BCB255000BDD3BC /* DepartmentDetailsView */,
 				CD5B9A962BD4B9A000714CCA /* IncidentView */,
 				CD3A7D512BCFAB4B00108768 /* TasksView */,
-				CD5B9A992BD4D67F00714CCA /* TaskView */,
+				CD5B9A992BD4D67F00714CCA /* TaskDetailView */,
 				CD5B9A932BD4B79F00714CCA /* AdvancedSearchView */,
 				CD3D2EB52BC552AE000DB275 /* ContactsView */,
 				CD3D2EBF2BC55923000DB275 /* ContactDetailsView */,
@@ -403,31 +526,56 @@
 				CD4963C02BDF8B48003DCF08 /* SettingsRowView.swift in Sources */,
 				CD3D2EBE2BC5591E000DB275 /* ContactDetailsView.swift in Sources */,
 				CD4964C12BDFE497003DCF08 /* RegistrationViewViewModel.swift in Sources */,
+				CD4964D72BE10AEC003DCF08 /* CreateIncidentButton.swift in Sources */,
 				CD4963BA2BDF813C003DCF08 /* RegistrationView.swift in Sources */,
+				CD4964ED2BE11763003DCF08 /* IncidentSections.swift in Sources */,
 				CD588AAB2BD6488F00ADF3BE /* Task.swift in Sources */,
+				CD4964D02BE10276003DCF08 /* LoginInputViews.swift in Sources */,
 				CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */,
+				CD4964CE2BE10168003DCF08 /* SignInButtonView.swift in Sources */,
 				CD45C0962BDA4E4900D9984E /* DepartmentDetailsViewViewModel.swift in Sources */,
+				CD4964F62BE11AE7003DCF08 /* TaskDescriptionSection.swift in Sources */,
+				CD4964EB2BE11710003DCF08 /* DescriptionSectionView.swift in Sources */,
 				CD5629B52BD7B41600C2ECF7 /* AdvancedSearchViewViewModel.swift in Sources */,
+				CD4964E02BE11141003DCF08 /* ExpandedTasks.swift in Sources */,
+				CD4964F82BE1201C003DCF08 /* SearchFieldView.swift in Sources */,
+				CD4964C52BE0F4A2003DCF08 /* BlueButtonView.swift in Sources */,
+				CD4964E92BE116B9003DCF08 /* DetailSectionView.swift in Sources */,
 				CD5B9A922BD4B79C00714CCA /* AdvancedSearchView.swift in Sources */,
 				CD3D2EAF2BC551D8000DB275 /* MainView.swift in Sources */,
+				CD4964DE2BE110AB003DCF08 /* AwaitingApprovalSection.swift in Sources */,
 				CD4963BD2BDF89D7003DCF08 /* ProfileView.swift in Sources */,
+				CD4964FF2BE12634003DCF08 /* ContactList.swift in Sources */,
+				CD4964E22BE1134F003DCF08 /* IncidentButtons.swift in Sources */,
 				CD3D2EB82BC5535B000DB275 /* User.swift in Sources */,
-				CD3A7D502BCFAB4700108768 /* TasksView.swift in Sources */,
+				CD3A7D502BCFAB4700108768 /* TaskView.swift in Sources */,
+				CD4964C92BE0FE8D003DCF08 /* RegistrationInputViews.swift in Sources */,
 				CD3F1B162BCA826E00BDD3BC /* ContactsViewViewModel.swift in Sources */,
 				CD588AAF2BD6793F00ADF3BE /* IncidentViewViewModel.swift in Sources */,
 				CD588AAD2BD6562400ADF3BE /* DepartmentsViewViewModel.swift in Sources */,
+				CD4964E72BE1164C003DCF08 /* CategorySectionView.swift in Sources */,
 				CD4963B82BDF7C90003DCF08 /* InputView.swift in Sources */,
+				CD4964EF2BE118DA003DCF08 /* TaskNumberSection.swift in Sources */,
 				CD3D2EC42BC56059000DB275 /* LoginViewViewModel.swift in Sources */,
+				CD4964C72BE0FE14003DCF08 /* LogoView.swift in Sources */,
 				CD3D2EC12BC55FBA000DB275 /* RootView.swift in Sources */,
+				CD4964E52BE115DD003DCF08 /* PrioritySectionView.swift in Sources */,
 				CD3F1B182BCA9BEA00BDD3BC /* ContactCellView.swift in Sources */,
 				CD3D2EB42BC552A4000DB275 /* DepartmentsView.swift in Sources */,
+				CD4964F42BE11A10003DCF08 /* TaskDetailsSection.swift in Sources */,
+				CD4964FD2BE12505003DCF08 /* SearchSection.swift in Sources */,
 				CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */,
-				CD5B9A982BD4D67B00714CCA /* TaskView.swift in Sources */,
+				CD5B9A982BD4D67B00714CCA /* TaskDetailsView.swift in Sources */,
 				CD5B9A952BD4B99B00714CCA /* IncidentView.swift in Sources */,
 				CD3F1B1B2BCB1B8400BDD3BC /* DepartmentItemView.swift in Sources */,
 				CD3F1B1E2BCB254B00BDD3BC /* DepartmentDetailsView.swift in Sources */,
 				CD3D2EB22BC55279000DB275 /* ContactsView.swift in Sources */,
+				CD4964DA2BE10DB3003DCF08 /* TasksSection.swift in Sources */,
+				CD4964D32BE1052B003DCF08 /* SignUpButtonView.swift in Sources */,
 				CD5A18B32BD1034C00656EDF /* TaskCellView.swift in Sources */,
+				CD4964CC2BE0FF83003DCF08 /* ListDepartments.swift in Sources */,
+				CD4964FB2BE121C7003DCF08 /* FilteredTasksSection.swift in Sources */,
+				CD4964DC2BE11052003DCF08 /* AdvancedSearchSection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,8 +17,10 @@ protocol AuthenticationFormProtocol {
 final class LoginViewViewModel: ObservableObject {
     @Published var userSession: FirebaseAuth.User?
     @Published var currentUser: User?
+    
     @Published var email: String = ""
     @Published var password: String = ""
+    
     @Published var isEmailTaken = false
     @Published var showAlert = false
     @Published var alertMessage = ""

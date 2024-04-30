@@ -9,23 +9,26 @@ import SwiftUI
 
 struct DepartmentsView: View {
     @StateObject private var departmentsViewVM = DepartmentsViewViewModel()
-    @EnvironmentObject private var loginViewVM: LoginViewViewModel
-     
+    
     private let columns = [GridItem(.adaptive(minimum: 180, maximum: 180))]
     
     var body: some View {
         NavigationStack {
             ScrollView {
+                if departmentsViewVM.isLoading {
+                    ProgressView()
+                } else {
                     LazyVGrid(columns: columns) {
                         ForEach(departmentsViewVM.departments, id: \.name) { department in
-                            NavigationLink(
-                                destination: DepartmentDetailsView(
-                                    title: department.name,
-                                    department: department)) {
+                            NavigationLink(destination: DepartmentDetailsView(
+                                title: department.name,
+                                department: department)
+                            ) {
                                 DepartmentItemView(title: department.name)
                             }
                         }
                     }
+                }
             }
             .navigationTitle("Service Desk")
             .toolbar {
@@ -37,6 +40,9 @@ struct DepartmentsView: View {
             }
         }
         .onAppear {
+            departmentsViewVM.fetchDepartments()
+        }
+        .refreshable {
             departmentsViewVM.fetchDepartments()
         }
     }

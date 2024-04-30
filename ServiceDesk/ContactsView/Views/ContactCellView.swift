@@ -20,7 +20,6 @@ struct ContactCellView: View {
             }
             Text(contact.post)
                 .font(.subheadline)
-            
         }
     }
 }

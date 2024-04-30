@@ -18,7 +18,6 @@ final class DepartmentDetailsViewViewModel: ObservableObject {
     @Published var isExpandedTasks = false
     
     private let networkManager = NetworkManager.shared
-    
     private var selectedDepartment: DepartmentTask?
     
     func fetchTasks(for departmentName: String) {
@@ -33,7 +32,7 @@ final class DepartmentDetailsViewViewModel: ObservableObject {
                     return
                 }
                 
-                awaitingApproval = selectedDepartment.tasks.awaitingApproval!
+                awaitingApproval = selectedDepartment.tasks.awaitingApproval
                 
                 openTasks = selectedDepartment.tasks.currentTasks.open
                 closedTasks = selectedDepartment.tasks.currentTasks.closed

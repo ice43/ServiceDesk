@@ -14,6 +14,7 @@ final class IncidentViewViewModel: ObservableObject {
     @Published var textCategory = ""
     @Published var textDetail = ""
     @Published var textDescription = ""
+    @Published var isShowingAlert = false
     
     private let networkManager = NetworkManager.shared
     private var selectedDepartment: DepartmentTask?

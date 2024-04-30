@@ -21,11 +21,14 @@ struct SettingsRowView: View {
             
             Text(title)
                 .font(.subheadline)
-                .foregroundStyle(.black)
         }
     }
 }
 
 #Preview {
-    SettingsRowView(imageName: "gear", title: "Department", tintColor: .gray)
+    SettingsRowView(
+        imageName: "gear",
+        title: "Department",
+        tintColor: .gray
+    )
 }

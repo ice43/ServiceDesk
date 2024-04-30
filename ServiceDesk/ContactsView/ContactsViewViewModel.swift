@@ -10,6 +10,7 @@ import Foundation
 final class ContactsViewViewModel: ObservableObject {
     @Published var departments: [DepartmentContact] = []
     @Published var searchText = ""
+    @Published var isLoading = true
     
     var filteredDepartments: [DepartmentContact] {
         guard !searchText.isEmpty else { return departments }
@@ -35,10 +36,13 @@ final class ContactsViewViewModel: ObservableObject {
     private let networkManager = NetworkManager.shared
     
     func fetchContacts() {
-        networkManager.fetchContacts(from: Link.contacts.url) { result in
+        networkManager.fetchContacts(from: Link.contacts.url) { [weak self] result in
+            guard let self else { return }
+            
             switch result {
             case .success(let departments):
                 self.departments = departments
+                isLoading = false
             case .failure(let error):
                 print(error.localizedDescription)
             }

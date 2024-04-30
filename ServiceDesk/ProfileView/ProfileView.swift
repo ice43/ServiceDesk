@@ -79,6 +79,8 @@ struct ProfileView: View {
                     }
                 }
             }
+        } else {
+            ProgressView()
         }
     }
 }

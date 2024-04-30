@@ -49,7 +49,7 @@ struct InfoCreateTask: Decodable {
 }
 
 struct Tasks: Decodable {
-    let awaitingApproval: [CurrentTask]?
+    let awaitingApproval: [CurrentTask]
     let currentTasks: CategoryTasks
     
     static func getTasks() -> Tasks {
