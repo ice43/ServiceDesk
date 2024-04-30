@@ -12,30 +12,41 @@ struct LoginView: View {
     
     var body: some View {
         NavigationStack {
-            Spacer()
-            
-            VStack {
-                LogoView()
-                
-                LoginInputViews(
-                    email: $loginViewVM.email,
-                    password: $loginViewVM.password
-                )
-                .padding()
-                
-                BlueButtonView(title: "Sign in") {
-                    loginViewVM.signIn()
-                }
-                .padding(.top, 20)
-                .disabled(!loginViewVM.formIsValid)
-                .opacity(loginViewVM.formIsValid ? 1 : 0.5)
-                .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.showAlert, actions: {} )
-                
+            ScrollView {
                 Spacer()
-                            
-                SignUpButtonView()
+                
+                VStack {
+                    LogoView()
+                    
+                    LoginInputViews(
+                        email: $loginViewVM.email,
+                        password: $loginViewVM.password
+                    )
+                    .padding()
+                    
+                    BlueButtonView(title: "Sign in") {
+                        loginViewVM.signIn()
+                    }
+                    .padding(.top, 20)
+                    .disabled(!loginViewVM.formIsValid)
+                    .opacity(loginViewVM.formIsValid ? 1 : 0.5)
+                    .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.showAlert, actions: {} )
+                    
+                    Spacer()
+                    
+                    SignUpButtonView()
+                        .padding(.top, 230)
+                }
+                .padding()
             }
-            .padding()
+        }
+        .onTapGesture {
+            UIApplication.shared.sendAction(
+                #selector(UIResponder.resignFirstResponder),
+                to: nil,
+                from: nil,
+                for: nil
+            )
         }
     }
 }

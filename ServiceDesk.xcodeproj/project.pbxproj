@@ -22,7 +22,6 @@
 		CD45C0962BDA4E4900D9984E /* DepartmentDetailsViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD45C0952BDA4E4900D9984E /* DepartmentDetailsViewViewModel.swift */; };
 		CD493AF32BC91CAB0008A34B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF22BC91CAB0008A34B /* NetworkManager.swift */; };
 		CD493AF62BC91CDE0008A34B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF52BC91CDE0008A34B /* Alamofire */; };
-		CD493AF82BC91CDE0008A34B /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF72BC91CDE0008A34B /* AlamofireDynamic */; };
 		CD493AFA2BC91F550008A34B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD493AF92BC91F550008A34B /* Contact.swift */; };
 		CD4963B82BDF7C90003DCF08 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4963B72BDF7C90003DCF08 /* InputView.swift */; };
 		CD4963BA2BDF813C003DCF08 /* RegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4963B92BDF813C003DCF08 /* RegistrationView.swift */; };
@@ -70,7 +69,8 @@
 		CD5B9A982BD4D67B00714CCA /* TaskDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5B9A972BD4D67B00714CCA /* TaskDetailsView.swift */; };
 		CD834E192BC3FC1800C18624 /* ServiceDeskApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E182BC3FC1800C18624 /* ServiceDeskApp.swift */; };
 		CD834E1B2BC3FC1800C18624 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD834E1A2BC3FC1800C18624 /* LoginView.swift */; };
-		CD9B24FF2BE14A590067891A /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CD493AF72BC91CDE0008A34B /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		CD8BE7CB2BE1655A0020FAE9 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CD8BE7CA2BE1655A0020FAE9 /* AlamofireDynamic */; };
+		CD8BE7CC2BE1655A0020FAE9 /* AlamofireDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = CD8BE7CA2BE1655A0020FAE9 /* AlamofireDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -80,7 +80,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CD9B24FF2BE14A590067891A /* AlamofireDynamic in Embed Frameworks */,
+				CD8BE7CC2BE1655A0020FAE9 /* AlamofireDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,8 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD493AF62BC91CDE0008A34B /* Alamofire in Frameworks */,
-				CD493AF82BC91CDE0008A34B /* AlamofireDynamic in Frameworks */,
 				CD4963D82BDFA649003DCF08 /* FirebaseFirestore in Frameworks */,
+				CD8BE7CB2BE1655A0020FAE9 /* AlamofireDynamic in Frameworks */,
 				CD4963D02BDF9A2C003DCF08 /* FirebaseAuth in Frameworks */,
 				CD4963D62BDFA5F1003DCF08 /* FirebaseFirestoreSwift in Frameworks */,
 			);
@@ -473,10 +473,10 @@
 			name = ServiceDesk;
 			packageProductDependencies = (
 				CD493AF52BC91CDE0008A34B /* Alamofire */,
-				CD493AF72BC91CDE0008A34B /* AlamofireDynamic */,
 				CD4963CF2BDF9A2C003DCF08 /* FirebaseAuth */,
 				CD4963D52BDFA5F1003DCF08 /* FirebaseFirestoreSwift */,
 				CD4963D72BDFA649003DCF08 /* FirebaseFirestore */,
+				CD8BE7CA2BE1655A0020FAE9 /* AlamofireDynamic */,
 			);
 			productName = ServiceDesk;
 			productReference = CD834E152BC3FC1800C18624 /* ServiceDesk.app */;
@@ -734,6 +734,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -768,6 +769,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -833,11 +835,6 @@
 			package = CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		CD493AF72BC91CDE0008A34B /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
-		};
 		CD4963CF2BDF9A2C003DCF08 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CD4963C32BDF9582003DCF08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -852,6 +849,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CD4963C32BDF9582003DCF08 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		CD8BE7CA2BE1655A0020FAE9 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD493AF42BC91CDE0008A34B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

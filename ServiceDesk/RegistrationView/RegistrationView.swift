@@ -13,25 +13,37 @@ struct RegistrationView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            LogoView()
-            
-            RegistrationInputViews(registrationViewVM: registrationViewVM)
-            
-            BlueButtonView(title: "Sign up") {
-                createUser()
+        ScrollView {
+            VStack {
+                LogoView()
+                
+                RegistrationInputViews(registrationViewVM: registrationViewVM)
+                
+                BlueButtonView(title: "Sign up") {
+                    createUser()
+                }
+                .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.isEmailTaken, actions: {} )
+                .padding(.top, 10)
+                .disabled(!registrationViewVM.formIsValid)
+                .opacity(registrationViewVM.formIsValid ? 1 : 0.5)
+                
+                Spacer()
+                
+                SignInButtonView(dismiss: dismiss.callAsFunction)
+                    .padding(.top, 20)
             }
-            .alert(loginViewVM.alertMessage, isPresented: $loginViewVM.isEmailTaken, actions: {} )
-            .disabled(!registrationViewVM.formIsValid)
-            .opacity(registrationViewVM.formIsValid ? 1 : 0.5)
-            
-            Spacer()
-            
-            SignInButtonView(dismiss: dismiss.callAsFunction)
+            .padding()
+            .onAppear {
+                registrationViewVM.fetchDepartments()
+            }
         }
-        .padding()
-        .onAppear {
-            registrationViewVM.fetchDepartments()
+        .onTapGesture {
+            UIApplication.shared.sendAction(
+                #selector(UIResponder.resignFirstResponder),
+                to: nil,
+                from: nil,
+                for: nil
+            )
         }
     }
     
