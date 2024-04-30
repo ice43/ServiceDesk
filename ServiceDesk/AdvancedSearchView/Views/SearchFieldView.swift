@@ -19,7 +19,7 @@ struct SearchFieldView: View {
         Text(title)
         TextField(placeholder, text: $text)
             .textFieldStyle(.roundedBorder)
-            .onChange(of: advancedSearchViewVM.author) { _, _ in
+            .onChange(of: text) { _, _ in
                 advancedSearchViewVM.filterTasks(for: tasks)
             }
             .onAppear {
