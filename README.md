@@ -23,9 +23,10 @@ An application that allows you to create and track the execution of applications
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/3f88281d-2f04-47d1-b9b5-b2617f959a76" width="255" height="550"/>
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/06cff384-c7d5-4eb9-81f9-502f5260aded" width="255" height="550"/>
 
-## Contacts and contact details screens
+## Contacts, contact details screens and search bar
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/ca022696-21b2-4629-8d67-e35c797a5892" width="255" height="550"/>
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/1d693649-6664-4c41-9231-eaff79f06e69" width="255" height="550"/> 
+<img src="https://github.com/ice43/ServiceDesk/assets/92436401/f5db9b0c-be9f-474c-af5f-d3e1c66f9c64" width="255" height="550"/> 
 
 ## Dark theme support
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/60f691e1-8bd2-4845-acf4-7b8a8aae4693" width="255" height="550"/>
