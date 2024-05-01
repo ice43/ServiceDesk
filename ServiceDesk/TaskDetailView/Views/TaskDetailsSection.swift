@@ -9,8 +9,9 @@ import SwiftUI
 
 struct TaskDetailsSection: View {
     let firstTitle: String
+    let firstValue: String
     let secondTitle: String
-    let task: CurrentTask
+    let secondValue: String
     
     var body: some View {
         HStack {
@@ -19,7 +20,7 @@ struct TaskDetailsSection: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 
-                Text(task.responsiblePerson)
+                Text(firstValue)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             
@@ -30,7 +31,7 @@ struct TaskDetailsSection: View {
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                 
-                Text(task.date)
+                Text(secondValue)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
         }
@@ -40,7 +41,8 @@ struct TaskDetailsSection: View {
 #Preview {
     TaskDetailsSection(
         firstTitle: "Status",
+        firstValue: "Open",
         secondTitle: "Priority",
-        task: CurrentTask.getTask()
+        secondValue: "Default"
     )
 }

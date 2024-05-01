@@ -19,16 +19,18 @@ struct TaskDetailsView: View {
             
             TaskDetailsSection(
                 firstTitle: "Status",
+                firstValue: task.status,
                 secondTitle: "Priority",
-                task: task
+                secondValue: task.priority
             )
             
             Divider()
             
             TaskDetailsSection(
                 firstTitle: "Responsible person",
+                firstValue: task.responsiblePerson,
                 secondTitle: "Date",
-                task: task
+                secondValue: task.date
             )
             
             Divider()
