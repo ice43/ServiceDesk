@@ -20,7 +20,7 @@ An application that allows you to create and track the execution of applications
 
 ## Tasks list, task and advanced search screens
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/a5d515d4-16e0-45bc-99cc-e4eeb126b14f" width="255" height="550"/>
-<img src="https://github.com/ice43/ServiceDesk/assets/92436401/989fc0dd-194c-4646-b0f2-81bf2ff88605" width="255" height="550"/>
+<img src="https://github.com/ice43/ServiceDesk/assets/92436401/3f88281d-2f04-47d1-b9b5-b2617f959a76" width="255" height="550"/>
 <img src="https://github.com/ice43/ServiceDesk/assets/92436401/06cff384-c7d5-4eb9-81f9-502f5260aded" width="255" height="550"/>
 
 ## Contacts and contact details screens
